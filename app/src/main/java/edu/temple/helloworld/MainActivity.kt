@@ -2,15 +2,20 @@ package edu.temple.helloworld
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+
 
 
 class MainActivity : AppCompatActivity() {
 
     // Declare view properties - the first one is done for you
     lateinit var displayTextView: TextView
+    lateinit var displayNameEditText : EditText
+    lateinit var displayButton: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,9 +23,13 @@ class MainActivity : AppCompatActivity() {
 
         // Initialize with views defined in Layout - the first one is done for you
         displayTextView = findViewById(R.id.displayTextView)
+        displayButton = findViewById(R.id.clickMeButton)
+        displayNameEditText = findViewById(R.id.nameEditText)
 
         
         // Respond to button click event per specifications
+        val textView = findViewById<TextView>(R.id.displayTextView)
+        findViewById<View>(R.id.clickMeButton).setOnClickListener{textView.text = "Clicked!"}
 
 
     }
