@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 
+
 class MainActivity : AppCompatActivity() {
 
     // Declare view properties - the first one is done for you
