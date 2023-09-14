@@ -28,8 +28,9 @@ class MainActivity : AppCompatActivity() {
 
         
         // Respond to button click event per specifications
-        val textView = findViewById<TextView>(R.id.displayTextView)
-        findViewById<View>(R.id.clickMeButton).setOnClickListener{textView.text = "Clicked!"}
+        displayButton.setOnClickListener{
+            displayTextView.text = "Hello ${displayNameEditText}! Welcome!"
+        }
 
 
     }
